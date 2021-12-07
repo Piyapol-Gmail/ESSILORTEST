@@ -1,0 +1,16 @@
+﻿@using TestESSILOR.Models
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<ReturnDT> DT = ViewData["RDT"] as List<ReturnDT>;
+}
+
+<div class="jumbotron">
+    @if (DT != null && DT.Count > 0)
+    {
+        foreach (var d in DT)
+        {
+            <p class="lead">@d.TAG  :  @d.MSG</p>
+        }
+    }
+</div>
